@@ -1,0 +1,8 @@
+{
+  "private" : {
+    "SINCH_SECRET":"be true to your self"
+  },
+  "public":{
+    "SINCH_KEY":"call your mother"
+  }
+}
