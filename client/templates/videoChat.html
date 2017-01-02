@@ -1,14 +1,22 @@
 <template name="videoChat">
+sign up
+
+<form id="sign-up">
+  <input type="text" name="userName" placeholder="user name" />
+  <input type="text" name="userPassword" placeholder="password">
+</form>
 
 sinch video chat
-
-  <input id='room-name' type='text' />
+<form id='start-chat'>
+  <input name='room-name' type='text' placeholder="room name" />
+  <button type='submit'>call</button>
+</form>
   <br>
   <video id='video-chat-panel' autoplay=true></video>
-
-  <button id="start-chat">Start</button>
   <br>
-  <button id="end-chat">End</button>
+  <button id="answer-chat">answer</button>
+  <br>
+  <button id="end-chat">end</button>
 
 
 </template>
