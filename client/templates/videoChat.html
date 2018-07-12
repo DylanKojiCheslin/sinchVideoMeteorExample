@@ -1,22 +1,30 @@
 <template name="videoChat">
-sign up
+  {{#unless isLoggedIn}}
+    sign up
+    <form id="sign-up">
+      <input type="text" name="userName" placeholder="user name" />
+      <input type="text" name="userPassword" placeholder="password">
+      <button type="submit">sign up</button>
+    </form>
+    <br>
+    log in
+    <form id="log-in">
+      <input type="text" name="userName" placeholder="user name">
+      <input type="text" name="userPassword" placeholder="password">
+    </form>
+  {{/unless}}
 
-<form id="sign-up">
-  <input type="text" name="userName" placeholder="user name" />
-  <input type="text" name="userPassword" placeholder="password">
-</form>
-
-sinch video chat
-<form id='start-chat'>
-  <input name='room-name' type='text' placeholder="room name" />
-  <button type='submit'>call</button>
-</form>
-  <br>
-  <video id='video-chat-panel' autoplay=true></video>
-  <br>
-  <button id="answer-chat">answer</button>
-  <br>
-  <button id="end-chat">end</button>
-
-
+  {{#if isLoggedIn}}
+    sinch video chat
+    <form id='start-chat'>
+      <input name='room-name' type='text' placeholder="room name" />
+      <button type='submit'>call</button>
+    </form>
+    <br>
+    <video id='video-chat-panel' autoplay=true></video>
+    <br>
+    <button id="answer-chat">answer</button>
+    <br>
+    <button id="end-chat">end</button>
+  {{/if}}
 </template>
